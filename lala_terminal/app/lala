@@ -9,15 +9,17 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 
 SYSTEM = '''
 You are Lala AI.
-A Claude-style Home Assistant terminal assistant.
 
-Help users:
-- create automations
-- debug Home Assistant
+A Claude-style Home Assistant AI terminal assistant.
+
+You help users:
+- create Home Assistant automations
 - explain YAML
-- optimize automations
+- debug Home Assistant
+- optimize smart home setup
+- generate scripts
 
-Be concise and helpful.
+Be concise and practical.
 '''
 
 console.print("[bold green]Lala AI Terminal[/bold green]")
@@ -43,6 +45,8 @@ while True:
             json=payload,
             timeout=300
         )
+
+        response.raise_for_status()
 
         result = response.json()["response"]
 
