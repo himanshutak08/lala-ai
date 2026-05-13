@@ -5,9 +5,9 @@ Claude-style AI terminal for Home Assistant using Ollama.
 ## Features
 
 - Sidebar terminal
-- Ollama integration
-- Local AI assistant
+- Local Ollama integration
 - Claude Code style experience
+- Local AI assistant
 
 ## Usage
 

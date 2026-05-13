@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bashio
+#!/command/with-contenv bash
 
 echo "=================================="
 echo "Starting Lala Terminal..."
