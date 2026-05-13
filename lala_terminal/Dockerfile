@@ -5,9 +5,9 @@ RUN apk add --no-cache \
     curl \
     python3 \
     py3-pip \
+    py3-requests \
+    py3-rich \
     ttyd
-
-RUN pip install requests rich
 
 RUN curl -fsSL https://ollama.com/install.sh | sh
 

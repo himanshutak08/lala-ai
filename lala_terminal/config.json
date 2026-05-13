@@ -1,6 +1,6 @@
 {
   "name": "Lala Terminal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "slug": "lala_terminal",
   "description": "Claude-style AI terminal for Home Assistant",
   "startup": "services",
