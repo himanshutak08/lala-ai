@@ -4,12 +4,10 @@ Claude-style AI terminal for Home Assistant using Ollama.
 
 ## Features
 
-- Sidebar terminal inside Home Assistant
-- Local Ollama integration
-- Claude Code style workflow
+- Sidebar terminal
+- Ollama integration
 - Local AI assistant
-- Smart home automation help
-- Offline capable
+- Claude Code style experience
 
 ## Usage
 
@@ -18,18 +16,8 @@ Open:
 - Sidebar
 - Lala Terminal
 
-Inside terminal:
+Then run:
 
 ```bash
 lala
-```
-
-Example prompts:
-
-```txt
-create automation to turn off lights at 11 PM
-
-explain this YAML
-
-create bedtime routine automation
 ```

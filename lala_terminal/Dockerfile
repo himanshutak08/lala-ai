@@ -15,9 +15,7 @@ RUN apk add --no-cache \
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
 COPY app /app
-COPY run.sh /run.sh
+COPY rootfs /
 
-RUN chmod +x /run.sh
 RUN chmod +x /app/lala
-
-CMD ["/run.sh"]
+RUN chmod +x /etc/services.d/lala/run

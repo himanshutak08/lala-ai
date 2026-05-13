@@ -9,9 +9,9 @@ ollama serve &
 
 sleep 10
 
-echo "Pulling AI model..."
+echo "Pulling model..."
 ollama pull qwen2.5:3b
 
-echo "Starting web terminal..."
+echo "Starting ttyd terminal..."
 
-ttyd -W -p 7681 bash
+exec ttyd -W -p 7681 bash
