@@ -1,13 +1,13 @@
 # Lala Terminal
 
-Claude-style AI terminal for Home Assistant using Ollama.
+Minimal working Claude-style terminal addon for Home Assistant.
 
 ## Features
 
 - Sidebar terminal
-- Local Ollama integration
-- Claude Code style experience
-- Local AI assistant
+- ttyd web terminal
+- bash shell
+- starter lala CLI
 
 ## Usage
 
@@ -16,7 +16,7 @@ Open:
 - Sidebar
 - Lala Terminal
 
-Then run:
+Inside terminal:
 
 ```bash
 lala

@@ -1,21 +1,18 @@
-FROM ghcr.io/home-assistant/aarch64-base:latest
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 RUN apk add --no-cache \
     bash \
-    curl \
-    git \
+    ttyd \
     python3 \
     py3-pip \
     py3-requests \
-    py3-rich \
-    ttyd \
-    zstd \
-    ca-certificates
-
-RUN curl -fsSL https://ollama.com/install.sh | sh
+    py3-rich
 
 COPY app /app
-COPY rootfs /
+COPY run.sh /run.sh
 
+RUN chmod +x /run.sh
 RUN chmod +x /app/lala
-RUN chmod +x /etc/services.d/lala/run
+
+CMD ["/run.sh"]
