@@ -1,16 +1,19 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from agent import run_agent
 
 app = FastAPI()
 
 class ChatRequest(BaseModel):
     prompt: str
 
+@app.get("/")
+def root():
+    return {"status": "Lala AI Running"}
+
 @app.post("/chat")
 def chat(req: ChatRequest):
     return {
-        "response": run_agent(req.prompt)
+        "response": f"You said: {req.prompt}"
     }
 
 if __name__ == "__main__":
