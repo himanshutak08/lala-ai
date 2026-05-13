@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+
+import requests
+from rich.console import Console
+
+console = Console()
+
+OLLAMA_URL = "http://localhost:11434/api/generate"
+
+SYSTEM = '''
+You are Lala AI.
+A Claude-style Home Assistant terminal assistant.
+Help users create automations and debug Home Assistant.
+'''
+
+console.print("[bold green]Lala AI Terminal[/bold green]")
+console.print("Type 'exit' to quit\n")
+
+while True:
+    try:
+        prompt = input("lala > ")
+
+        if prompt.lower() == "exit":
+            break
+
+        payload = {
+            "model": "qwen2.5:3b",
+            "prompt": SYSTEM + "\n" + prompt,
+            "stream": False
+        }
+
+        response = requests.post(OLLAMA_URL, json=payload)
+
+        result = response.json()["response"]
+
+        console.print("\n[cyan]" + result + "[/cyan]\n")
+
+    except Exception as e:
+        console.print(f"[red]{e}[/red]")

@@ -1,0 +1,24 @@
+{
+  "name": "Lala Terminal",
+  "version": "1.0.0",
+  "slug": "lala_terminal",
+  "description": "Claude-style AI terminal for Home Assistant",
+  "startup": "services",
+  "boot": "auto",
+  "panel_icon": "mdi:console",
+  "panel_title": "Lala Terminal",
+  "ingress": true,
+  "ingress_port": 7681,
+  "arch": ["amd64", "aarch64"],
+  "map": ["config:rw"],
+  "ports": {
+    "7681/tcp": 7681,
+    "11434/tcp": 11434
+  },
+  "options": {
+    "model": "qwen2.5:3b"
+  },
+  "schema": {
+    "model": "str"
+  }
+}
